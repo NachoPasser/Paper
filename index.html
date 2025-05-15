@@ -84,11 +84,11 @@
   </head>
   <body>
     <nav class="nav">
-      <a href="#abstract">Abstract</a>
-      <a href="#introduction">Introduction</a>
-      <a href="#methodology">Methodology</a>
-      <a href="#results">Results</a>
-      <a href="#conclusion">Conclusion</a>
+      <a href="#abstract">Abstracto</a>
+      <a href="#introduction">Introducción</a>
+      <a href="#methodology">Metodología</a>
+      <a href="#results">Resultados y análisis</a>
+      <a href="#conclusion">Conclusiones</a>
       <button class="toggle-btn" onclick="toggleDarkMode()">
         Toggle Dark Mode
       </button>
@@ -103,32 +103,16 @@
     -->
 
     <div class="header">
-      <h1>TODO: Paper Title</h1>
+      <h1>Paper Title</h1>
       <div class="authors">
         <p>
-          <a href="#">TODO: Author name 1</a><sup>1</sup>,
-          <a href="#">TODO: Author name 2</a><sup>*1,3</sup>,
-          <a href="#">TODO: Author name 3</a><sup>*2</sup>,
-          <a href="#">TODO: Author name 4</a><sup>*1</sup>,
-          <a href="#">TODO: Author name 5</a><sup>2</sup>,
-          <a href="#">TODO: Author name 6</a><sup>1</sup>
+          <a href="#">Ignacio Nicolas Passerini Terranova</a>
         </p>
         <p>
-          <sup>1</sup>TODO: University name 1 &nbsp;&nbsp; <sup>2</sup>TODO:
-          University name 2&nbsp;&nbsp; <sup>3</sup>TODO: University name 3
-        </p>
+          <a>Universidad Nacional de Tres de Febrero</a> | <a href="">Intercambios Transorgánicos</a></p>
         <p>
-          <sup>1</sup
-          ><a href="mailto:example1@email.com">TODO:email1@email.com</a>,
-          <sup>2</sup
-          ><a href="mailto:example2@email.com">TODO:email2@email.com</a>
+          <a href="mailto:ignaciopasser@gmail.com">ignaciopasser@gmail.com</a>
         </p>
-        <p>
-          <em>*Equal Contribution</em
-          ><!-- Remove if not applicable -->
-        </p>
-        <p>📌 Conference on TODO: Conference name, 2023 (Oral Talk)</p>
-        <p>📌 Presented at TODO: Conference name 2024, Yokohama, Japan.</p>
       </div>
     </div>
 
@@ -143,12 +127,8 @@
     -->
 
     <div class="buttons">
-      <a href="#" target="_blank">Paper</a>
       <a href="#" target="_blank">Videos</a>
-      <a href="#" target="_blank">Code</a>
-      <a href="#" target="_blank">Dataset</a>
-      <a href="#" target="_blank">Model</a>
-      <a href="#bibtex">BibTex</a>
+      <a href="#" target="_blank">Código</a>
     </div>
 
     <!-- Step 2 End: Button for links -->
@@ -161,7 +141,7 @@
     -->
 
     <!-- Single YouTube Video -->
-    <div class="video-section">
+    <!-- <div class="video-section">
       <h3>Demo Video</h3>
       <div class="video-container">
         <iframe
@@ -179,11 +159,13 @@
         TODO: This is the short explanation paragraph of the video. Add your
         paragraph here if required
       </p>
-    </div>
+    </div> -->
 
     <div class="abstract" id="abstract">
-      <h2>Abstract</h2>
-      <p>TODO: Add Abstract</p>
+      <h2>Abstracto</h2>
+      <p>Este artículo describe el diseño de una grabadora de voz orientada a la recolección de muestras del español hablado en Argentina, con el objetivo de crear un corpus representativo del español hablado en Argentina. El diseño de la herramienta se realizó bajo un enfoque basado en los principios de la Interacción Humano-Computadora (HCI), asegurando que la interfaz y la experiencia de usuario fueran accesibles, intuitivas y eficaces. Además se priorizó la captura fiel de la voz natural de los usuarios, respetando su tono, acento y ritmo. Como resultado, esta herramienta garantiza una recolección de voz inclusiva y fiel a las características naturales del hablante. Ideal para investigaciones lingüísticas como para el desarrollo de tecnologías del habla adaptadas al contexto argentino.
+       <strong>Keywords</strong>: Human-Computer Interaction, Experiencia de usuario, Recolección de voces, Diseño web, Dialecto argentino.
+      </p>
     </div>
 
     <!-- Step 3 End: Add your paper abstract -->
@@ -196,10 +178,117 @@
     -->
 
     <div class="content-section" id="introduction">
-      <h2>Introduction</h2>
-      <p>TODO: Add Introduction</p>
+      <h2>Introducción</h2>
+      <p>El español hablado en Argentina presenta una gran diversidad de acentos y variaciones lingüísticas, lo que hace fundamental la creación de un corpus de voz representativo y de alta calidad para su estudio y aplicaciones tecnológicas. Si bien existen diversas herramientas en la web para la grabación y recopilación de voz, la mayoría se limita a funciones básicas como permitir la grabación y descarga de audios, sin considerar particularidades lingüísticas ni principios de diseño centrados en el usuario. Incluso iniciativas como CommonVoice, que buscan construir un corpus de voces de múltiples idiomas mediante colaboración masiva (Ardila et al., 2019), aunque bien implementadas desde la perspectiva de la Interacción Humano-Computadora (HCI), no están específicamente adaptadas al español argentino ni optimizan la cobertura fonética del dialecto local. Tampoco incorporan estrategias para mantener la motivación del usuario durante la grabación, lo que puede afectar la continuidad de la participación.
+        
+        En este trabajo se propone el diseño de una grabadora de voz especialmente pensada para recolectar muestras del habla argentina. Basada en principios de Interacción Humano-Computadora (HCI), se busca crear una herramienta intuitiva, accesible y eficaz, que pueda ser utilizada por personas de todas las edades y niveles de experiencia tecnológica, incluyendo adultos mayores o usuarios con escaso manejo de computadoras. Además, se prioriza la captura de la voz en su forma más natural —en tono, acento y ritmo— asegurando que las muestras sean lo más representativos posible de la voz real de cada hablante, respetando su naturalidad y características propias. Esto permitirá construir un corpus más representativo de las particularidades del español hablado en Argentina, con potencial de impacto tanto en la investigación lingüística como en el desarrollo de tecnologías del habla adaptadas a nuestra región.
+        
+        Para el desarrollo de esta herramienta, se adoptó un enfoque iterativo basado en el ciclo de diseño de software del modelo de Norman. En una primera etapa, se evaluó la interfaz original identificando oportunidades de mejora desde la perspectiva de la Interacción Humano-Computadora (HCI). A partir de ese análisis, se diseñó un prototipo de baja fidelidad orientado a resolver los problemas detectados, con especial énfasis en la usabilidad, accesibilidad y facilidad de interacción, buscando garantizar una experiencia intuitiva para todo tipo de usuarios.
+        
+        Este prototipo fue evaluado mediante pruebas de usabilidad con usuarios potenciales, lo que permitió detectar nuevas necesidades y áreas de mejora. En base a esos resultados, se desarrolló una segunda versión del prototipo, que también fue sometida a evaluación. Dado que el prototipo cumplía con los objetivos establecidos y no se identificaron inconvenientes relevantes, se avanzó con el desarrollo del prototipo de alta fidelidad.
+        
+        <strong>Pregunta de investigación</strong>: ¿De qué manera puede un enfoque basado en la Interacción Humano-Computadora (HCI) mejorar la accesibilidad y usabilidad de una grabadora de voz destinada a construir un corpus representativo del español hablado en Argentina?
+      </p>
     </div>
 
+    <div class="content-section" id="estado">
+      <h2>Estado del arte</h2>
+      <p>Existen numerosas herramientas orientadas a la grabación y descarga de audios con fines generales, como Voice Recorder, Clipchamp, Capcut, Vocaroo, Clyp, Speakpipe y Audiopal. Estas plataformas, si bien son funcionales, no están diseñadas para la creación de corpus lingüísticos ni contemplan aspectos como la diversidad dialectal o la experiencia del usuario. En contraste, existen iniciativas específicamente orientadas a la construcción de corpus de voz, como VoxForge (VoxForge, 2025), CommonVoice (Ardila et al., 2019) y LinguaLibre (LinguaLibre, 2025) que buscan recolectar grandes volúmenes de datos mediante colaboración masiva. Sin embargo, cada una presenta limitaciones específicas en relación a los objetivos de este trabajo.
+        
+        CommonVoice no adapta los textos al español argentino, ni busca optimizar la cobertura fonética del dialecto local. Tampoco incorpora estrategias para mantener el interés o la motivación del usuario durante la grabación, lo cual puede afectar la continuidad de la participación.
+        
+        LinguaLibre, por otro lado, se enfoca únicamente en la grabación de palabras sueltas, lo que dificulta construir un corpus con entonación y ritmo natural del habla continua.
+        
+        VoxForge no ofrece una plataforma de grabación integrada, por lo que el usuario necesita usar programas externos para grabar, lo que puede ser una dificultad para quienes no tienen experiencia técnica. 
+        
+        A diferencia de las propuestas existentes, esta herramienta fue desarrollada bajo un enfoque centrado en los principios de la Interacción Humano-Computadora (HCI), priorizando tanto la experiencia del usuario como la calidad lingüística de las grabaciones. En este sentido, se diseñaron textos específicos para el español argentino que buscan maximizar la variedad fonética y mantener el interés durante la tarea. Además, se eliminó la posibilidad de prelectura y relectura, con el fin de evitar una pronunciación ensayada y garantizar que las grabaciones representen con mayor precisión el habla natural del usuario. 
+      </p>
+    </div>
+
+    <div class="content-section" id="marco">
+      <h2>Marco teórico</h2>
+      <ol type="a">
+        <li>
+          <strong>Interacción Humano-Computadora</strong>
+          <p>La interacción humano-computadora es una disciplina que se ocupa del diseño, la evaluación y la implementación de sistemas informáticos interactivos para el uso humano, así como del estudio de los principales fenómenos que los rodean (Hewett et al. 1992). El objetivo principal de incorporar características de HCI en el diseño es desarrollar interfaces de usuario eficientes y efectivas que se ajusten a los requerimientos y deseos de los usuarios. Para lograrlo, se debe establecer un diseño de interfaz adecuado, que permita al usuario interactuar y navegar con facilidad, otorgándole mayor control sobre el sistema. (Sustainable Design).
+            
+            Entre sus principios se encuentran la usabilidad y accesibilidad. La usabilidad busca que los usuarios puedan interactuar de forma simple, efectiva y con bajo esfuerzo cognitivo. Para lograrlo, se aplican metodologías como pruebas con usuarios, evaluaciones heurísticas y diseño iterativo. Por otro lado, la accesibilidad está orientada a garantizar el uso del sistema por personas con distintas capacidades y niveles de experiencia tecnológica. En este caso se aplican principios de diseño inclusivo para que los sistemas sean accesibles para personas con discapacidades visuales, auditivas, motrices o cognitivas. (Human-Computer Interaction: Enhancing User Experience in Interactive Systems).
+            
+            Esta disciplina también considera factores como el diseño visual y la satisfacción emocional. Una interfaz atractiva motiva a los usuarios a continuar la interacción. Para ello se aplican conceptos como jerarquía visual, la teoría del color y la tipografía para crear interfaces intuitivas, atractivas y coherentes en lo visual. (Human-Computer Interaction: Enhancing User Experience in Interactive Systems).
+            
+            Aplicar los principios de HCI en el desarrollo de una herramienta de recolección de voz permite no solo mejorar la experiencia del usuario, sino también garantizar la precisión de los datos recolectados, ya que una interfaz clara y comprensible facilita un uso correcto y consistente del sistema.
+          </p>
+        </li>
+        <li>
+          <strong>Ciclo de vida del diseño de experiencia de usuario</strong>
+          <p>El ciclo de vida del diseño de experiencia de usuario (UX), según Hartson y Pyla (2019), es un proceso de diseño de experiencia de usuario iterativo y centrado en la evaluación continua. Este modelo nace de la relación entre la interacción humano-computadora (HCI) y el diseño UX, donde se emplean principios y métodos de HCI para comprender al usuario, sus necesidades y la manera en que interactúa con la tecnología. A partir de este entendimiento, se diseñan experiencias, se construyen prototipos, se evalúan mediante diversas técnicas, y los resultados se retroalimentan al proceso para refinar tanto el diseño como el conocimiento sobre la interacción. El ciclo se repite hasta lograr una interfaz que maximice la calidad de la experiencia. En vez del modelo clásico en cascada, este modelo actúa como una rueda en donde cada rotación te acerca más a tu destino, una mejor experiencia de usuario. 
+            
+            Se divide en cuatro etapas fundamentales:
+          </p>
+          <ul>
+            <li>
+              <strong>Needfinding</strong><p>En la búsqueda de necesidades (Needfinding), se analiza qué es lo que el usuario desea. Se busca comprender las tareas que los usuarios intentan realizar. Esto incluye identificar quién es el usuario, cuál es el contexto de la tarea, por qué está llevando a cabo dicha tarea y cualquier otra información relacionada con lo que se está diseñando. El proceso comienza definiendo algunas preguntas generales que se desean responder a lo largo de la recopilación de datos sobre quién es el usuario, qué está haciendo y qué necesita. Luego, se emplean diversos métodos para generar respuestas a esas preguntas y así obtener una mejor comprensión del usuario. Posteriormente, se aborda la formalización de los datos recopilados en un modelo compartible de la tarea y una lista de requisitos para la interfaz final.</p>
+            </li>
+            <li>
+              <strong>Alternativas de diseño</strong><p>Se desarrollan múltiples alternativas de diseño para evitar quedarnos atascados en una sola idea demasiado pronto. El objetivo es explorar una variedad de posibilidades antes de converger en una solución final que ofrezca una experiencia de usuario de alta calidad.</p>
+            </li>
+            <li>
+              <strong>Prototipado</strong><p>Se toman las ideas con más potencial y se transforman en prototipos que luego pueden presentarse a los usuarios. El objetivo es crear representaciones tangibles de las ideas de diseño para explorar, comunicar y evaluar soluciones antes de su implementación final. Los prototipos varían en niveles de fidelidad, que incluyen baja fidelidad (como prototipos en papel, tales como impresiones de wireframes estáticos, utilizados para la exploración del diseño y revisiones tempranas), fidelidad media (como prototipos interactivos de wireframes con navegación mediante clics) y alta fidelidad (prototipos funcionales programados).</p>
+            </li>
+            <li>
+              <strong>Evaluación</strong><p>Se evalúa la usabilidad, accesibilidad y experiencia general de cada prototipo, entrevistando a usuarios. Hay muchas formas de evaluar interfaces, se dividen en tres categorías:</p>
+              <ul>
+                <li>
+                  <p>Evaluación cualitativa: evaluación que enfatiza la totalidad del fenómeno. Se busca saber que aspectos les gusto o no les gusto a los usuarios, que estaban pensando mientran usaban la interfaz, por qué realizaron cierta acción, etc.</p>
+                </li>
+                <li>
+                  <p>Evaluación empírica: evaluación basada en resúmenes numéricos u observaciones de un fenómeno. Obtenemos feedback cuantitativo realizando experimentos controlados y evaluando los resultados. Esto lo debemos hacer luego de obtener el feedback cualitativo y requerimos de múltiples usuarios.</p>
+                </li>
+                <li>
+                  <p>Evaluación predictiva: evaluación basada en una aplicación sistematizada de principios y heurísticas preestablecidas. Es evaluar sin usuarios.</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
+            
+        </li>
+        <li>
+          <strong>Affordances</strong>
+          <p>Una affordance puede definirse como una relación entre las propiedades de un objeto y las capacidades del usuario que determinan cómo podría utilizarse dicho objeto (Norman, 1988). Una silla, por ejemplo, ofrece soporte y, por lo tanto, permite sentarse. La existencia de una affordance depende tanto de las propiedades del objeto como de las capacidades perceptuales y motrices del usuario. En el contexto del diseño de experiencia de usuario (UX), esta definición ha sido ampliada: una affordance es todo aquello que permite al usuario hacer o sentir algo durante su interacción con un sistema (Hartson & Pyla, 2019).
+            En esta línea, los autores identifican cinco tipos de affordances, cada uno con un rol particular en la facilitación de la interacción.
+          </p>
+          <ul>
+            <li>
+              <u>Affordance cognitivo</u>: Característica de diseño que ayuda a los usuarios con sus acciones cognitivas: pensar, decidir, aprender, recordar y conocer cosas. Un ejemplo sería una etiqueta en un botón que ayuda a los usuarios a saber qué sucederá si hacen clic en él.
+            </li>
+            <li>
+              <u>Affordance física</u>: Característica de diseño que ayuda a los usuarios con sus acciones físicas: hacer clic, tocar, señalar, gesticular y mover cosas. Un ejemplo sería un botón lo suficientemente grande para que los usuarios puedan hacer clic en él con precisión.
+            </li>
+            <li>
+              <u>Affordance sensorial</u>: Característica de diseño que ayuda a los usuarios con sus acciones sensoriales: ver, oír y sentir (además de saborear y oler). Un ejemplo sería un tamaño de fuente lo suficientemente grande para ser legible.
+            </li>
+            <li>
+              <u>Affordance funcional</u>: Característica de diseño que ayuda a los usuarios a utilizar un producto o sistema para realizar un trabajo (es decir, la utilidad de una función del sistema). Un ejemplo sería la capacidad del sistema para ordenar una serie de números cuando los usuarios hacen clic en el botón "Ordenar".
+            </li>
+            <li>
+              <u>Affordance emocional</u>: Característica de diseño que añade impacto emocional a la experiencia del usuario y ayuda a que aprecien y disfruten la interacción. Un ejemplo sería la estética atractiva en una página web, algo que haga que la interacción sea divertida.
+            </li>
+          </ul>
+          <p>Un enfoque integral de diseño UX debe contemplar la combinación de estos cinco tipos de affordances al diseñar un artefacto de interacción. Este término engloba sistemas, dispositivos, servicios, objetos o entornos que establecen comunicación, en una o ambas direcciones, con los seres humanos.</p>
+        </li>
+        <li>
+          <strong>Interacción Humano-Computadora</strong>
+          <p>La interacción humano-computadora es una disciplina que se ocupa del diseño, la evaluación y la implementación de sistemas informáticos interactivos para el uso humano, así como del estudio de los principales fenómenos que los rodean (Hewett et al. 1992). El objetivo principal de incorporar características de HCI en el diseño es desarrollar interfaces de usuario eficientes y efectivas que se ajusten a los requerimientos y deseos de los usuarios. Para lograrlo, se debe establecer un diseño de interfaz adecuado, que permita al usuario interactuar y navegar con facilidad, otorgándole mayor control sobre el sistema. (Sustainable Design).
+            
+            Entre sus principios se encuentran la usabilidad y accesibilidad. La usabilidad busca que los usuarios puedan interactuar de forma simple, efectiva y con bajo esfuerzo cognitivo. Para lograrlo, se aplican metodologías como pruebas con usuarios, evaluaciones heurísticas y diseño iterativo. Por otro lado, la accesibilidad está orientada a garantizar el uso del sistema por personas con distintas capacidades y niveles de experiencia tecnológica. En este caso se aplican principios de diseño inclusivo para que los sistemas sean accesibles para personas con discapacidades visuales, auditivas, motrices o cognitivas. (Human-Computer Interaction: Enhancing User Experience in Interactive Systems).
+            
+            Esta disciplina también considera factores como el diseño visual y la satisfacción emocional. Una interfaz atractiva motiva a los usuarios a continuar la interacción. Para ello se aplican conceptos como jerarquía visual, la teoría del color y la tipografía para crear interfaces intuitivas, atractivas y coherentes en lo visual. (Human-Computer Interaction: Enhancing User Experience in Interactive Systems).
+            
+            Aplicar los principios de HCI en el desarrollo de una herramienta de recolección de voz permite no solo mejorar la experiencia del usuario, sino también garantizar la precisión de los datos recolectados, ya que una interfaz clara y comprensible facilita un uso correcto y consistente del sistema.
+          </p>
+        </li>
+      </ol>
+    </div>
     <!-- Step 4 End: Add your paper introduction -->
 
     <!-- Step 5 Start: Add your paper methodology -->
@@ -210,7 +299,7 @@
     -->
 
     <div class="content-section" id="methodology">
-      <h2>Methodology</h2>
+      <h2>Metodología</h2>
       <p>TODO: Add Methodology</p>
       <ul>
         <li>TODO</li>
@@ -239,7 +328,7 @@
     -->
 
     <div class="content-section" id="results">
-      <h2>Results</h2>
+      <h2>Resultados y análisis</h2>
       <p>TODO: Add Results</p>
       <ul>
         <li>TODO</li>
@@ -248,7 +337,7 @@
     </div>
 
     <!-- 3 Images Carousel -->
-    <h3>Image Gallery</h3>
+    <!-- <h3>Image Gallery</h3>
     <div class="carousel-container" id="imageCarousel">
       <div class="carousel-track">
         <div class="carousel-slide">
@@ -279,10 +368,10 @@
       <button class="carousel-button prev">←</button>
       <button class="carousel-button next">→</button>
       <div class="carousel-indicators"></div>
-    </div>
+    </div> -->
 
     <!-- 3 Videos Carousel -->
-    <h3>Video Gallery</h3>
+    <!-- <h3>Video Gallery</h3>
     <div class="carousel-container" id="videoCarousel">
       <div class="carousel-track">
         <div class="carousel-slide">
@@ -361,10 +450,10 @@
       <button class="carousel-button prev">←</button>
       <button class="carousel-button next">→</button>
       <div class="carousel-indicators"></div>
-    </div>
+    </div> -->
 
     <!-- Single YouTube Video -->
-    <div class="video-section">
+    <!-- <div class="video-section">
       <h3>Demo Video</h3>
       <div class="video-container">
         <iframe
@@ -378,10 +467,10 @@
           allowfullscreen
         ></iframe>
       </div>
-    </div>
+    </div> -->
 
     <!-- YouTube Video List -->
-    <div class="video-section">
+    <!-- <div class="video-section">
       <h3>Demo Videos List</h3>
       <div class="video-container">
         <iframe
@@ -395,7 +484,7 @@
           allowfullscreen
         ></iframe>
       </div>
-    </div>
+    </div> -->
 
     <!-- Step 6 End: Add your paper results -->
 
@@ -407,7 +496,7 @@
     -->
 
     <div class="content-section" id="conclusion">
-      <h2>Conclusion</h2>
+      <h2>Conclusiones</h2>
       <p>TODO: Add Conclusion</p>
     </div>
 
@@ -420,13 +509,12 @@
     Remove this step if not applicable
     -->
 
-    <div class="bibtex-section" id="bibtex">
+    <!-- <div class="bibtex-section" id="bibtex">
       <h2>BibTeX</h2>
       <button class="bibtex-copy-button" onclick="copyBibTeX()">
         Copy to Clipboard
       </button>
       <pre>
-        <!-- Please edit only below details -->
         <code class="language-bibtex">
           @inproceedings{TODO: YourPaperCitation,
             title={TODO: Paper Title},
@@ -437,7 +525,7 @@
           }
         </code>
       </pre>
-    </div>
+    </div> -->
 
     <!-- Step 8 End: Add your paper references -->
 
@@ -448,10 +536,10 @@
     Remove this step if not applicable
     -->
 
-    <div class="content-section" id="acknowledgement">
+    <!-- <div class="content-section" id="acknowledgement">
       <h2>Acknowledgement</h2>
       <p>TODO: Add Acknowledgement if applicable or remove this</p>
-    </div>
+    </div> -->
 
     <!-- Step 9 End: Add your paper acknowledgement -->
 

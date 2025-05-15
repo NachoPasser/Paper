@@ -306,3 +306,7 @@ h2 {
 .dark-mode .nav a:hover {
   color: #3498db;
 }
+
+p{
+  white-space: pre-line;
+}
