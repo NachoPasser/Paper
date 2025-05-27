@@ -90,7 +90,7 @@
       <a href="#results">Resultados y análisis</a>
       <a href="#conclusion">Conclusiones</a>
       <button class="toggle-btn" onclick="toggleDarkMode()">
-        Toggle Dark Mode
+        Modo oscuro
       </button>
     </nav>
 
@@ -126,10 +126,10 @@
     Remove this step if not applicable
     -->
 
-    <div class="buttons">
+    <!-- <div class="buttons">
       <a href="#" target="_blank">Videos</a>
       <a href="#" target="_blank">Código</a>
-    </div>
+    </div> -->
 
     <!-- Step 2 End: Button for links -->
 
@@ -289,11 +289,111 @@
 
     <div class="content-section" id="methodology">
       <h2>Metodología</h2>
-      <p>TODO: Add Methodology</p>
-      <ul>
-        <li>TODO</li>
-        <li>TODO</li>
-      </ul>
+      <p>Previo al presente trabajo, el equipo de desarrollo había diseñado una primera versión de la interfaz para la grabadora de voz sin seguir ninguna metodología formal de diseño centrada en el usuario. Esta versión inicial fue construida de manera intuitiva, priorizando la funcionalidad básica y asumiendo que el usuario recibiría instrucciones a través de un video explicativo. En consecuencia, aspectos fundamentales como la usabilidad, accesibilidad y experiencia de usuario no fueron considerados en profundidad durante esta etapa.
+        
+        A partir del estudio de los principios de la Interacción Humano-Computadora (HCI), se llevó a cabo un análisis crítico del diseño original, identificando sus principales deficiencias desde una nueva perspectiva centrada en el usuario. Sobre esta base, se desarrolló un prototipo de baja fidelidad orientado a resolver los problemas detectados, incorporando principios de diseño HCI con el objetivo de mejorar la usabilidad y facilitar la interacción, independizando la interfaz del video explicativo. En la siguiente sección se detallan los problemas identificados en el diseño original, así como las soluciones propuestas en el primer prototipo. 
+      
+      </p>
+      <div class="image-section">
+        <img src="Assets/Figura1.jpg" alt="">
+        <p><strong>Figura 1: </strong>Etapa de pre-grabación del diseño original.</p>
+      </div>
+      <p>Esta pantalla representa el primer paso del ciclo de grabación. Fue diseñada con el objetivo de brindarle al usuario un momento de preparación cognitiva, en el que pueda leer y comprender el texto que va a grabar. Reduce la carga cognitiva al permitir que la grabación no lo tome por sorpresa ni lo obligue a improvisar.
+
+      El ítem (1) es un menú desplegable (select) que le permite al usuario seleccionar el autor de los textos que va a leer. El problema es que este enfoque fue descartado, la selección de textos literarios no garantizaba una buena cobertura fonológica (es decir, variedad de sonidos del habla), lo cual es un objetivo central del sistema. Debido a ello, se diseñaron frases especialmente construidas para maximizar la presencia de distintos fonemas del español argentino. Entonces, este selector debe ser eliminado ya que su presencia es innecesaria. 
+
+      El ítem (3) es un bloque de texto que tiene como propósito anticipar el contenido que se grabará en el siguiente paso. Esta presentación anticipada actúa como una estrategia de diseño que promueve la preparación mental (affordance cognitivo) y ayuda a reducir errores durante la grabación. Como se indicó previamente, el problema de este ítem es que los textos no garantizan la cobertura de todos los fonemas posibles por lo deben ser sustituidos por frases ingeniadas para la recolección de fonemas. 
+
+      El ítem (2) es el botón de inicio de grabación. Contiene el símbolo de un micrófono que actúa como un affordance cognitivo ya que es un símbolo ampliamente reconocido en contextos digitales y comunica de forma inmediata la funcionalidad de “grabar audio”.  El botón también es un affordance físico debido a que el botón tiene un tamaño y forma adecuados para interfaces táctiles, lo que permite que el usuario lo presione con facilidad. Y es un affordance sensorial gracias a que el alto contraste visual entre el botón y el fondo, y su ubicación destacada en la esquina superior derecha, mejoran su visibilidad. No presenta ningún problema de diseño.
+
+      </p>
+      <div class="image-section">
+        <img src="Assets/Figura2.jpg" alt="">
+        <p><strong>Figura 2: </strong>Etapa de pre-grabación del prototipo de baja fidelidad.</p>
+      </div>
+      <p>El ítem (1) es el botón de inicio de grabación. Este presenta una diferencia clave respecto al diseño original, el micrófono fue reemplazado por un nuevo ícono compuesto por un triángulo y un cuadrado. Esta decisión tuvo como objetivo evaluar si los usuarios asociaban correctamente estos símbolos a la acción de avanzar o retroceder de paso. Esta no sería la primera vez que ven este símbolo ya que, como se contará más adelante, se agregaron pasos extras previos al inicio del ciclo de grabación donde este icono está presente.
+
+        El ítem (2), que anteriormente era un menú desplegable para seleccionar el autor del texto, fue reemplazado por un contador de audios enviados. Dicho contador también se encuentra en uno de los siguientes pasos pero se decidió incluir también en esta pantalla por el principio de flexibilidad: para beneficiar a los usuarios más experimentados, que suelen interactuar rápidamente con la interfaz y podrían no llegar a revisar este dato en pasos posteriores, lo cual podría generar confusión o frustración si no tienen claridad sobre su progreso.
+
+        Del ítem (3) reemplazaron los fragmentos de obras literarias por frases diseñadas específicamente para cubrir la mayor diversidad de fonemas del español. Esta modificación permite mejorar la calidad de los datos recogidos sin comprometer la comprensión lectora del usuario.
+
+      </p>
+      <div class="image-section">
+        <img src="Assets/Figura3.jpg" alt="">
+        <p><strong>Figura 3: </strong>Etapa de grabación del diseño original.</p>
+      </div>
+      <p>Este es el segundo paso del ciclo de la grabación. Durante esta etapa, el usuario grabará su voz leyendo el texto que se muestra en pantalla. 
+
+        El ítem (1) es el botón de finalización de grabación. El botón de inicio de grabación cambia visualmente luego de ser activado, transformándose en un círculo rojo con un cuadrado blanco. Este símbolo se eligió porque es reconocido y asociado culturalmente con la acción de "detener grabación". Este botón representa un affordance cognitivo, ya que informa mentalmente al usuario sobre su función esperada. Al igual que el botón de inicio de grabación, es un affordance físico y sensorial. La diferencia es que este botón es aún más visible ya que el color rojo atrae rápidamente la atención. No presenta ningún problema de diseño.
+        
+        El resto de ítems mantienen los problemas descritos anteriormente.
+
+        El problema de este diseño es que si bien el ícono es culturalmente reconocible, no hay otros que indiquen de forma explícita que la grabación está en curso. Esto puede generar incertidumbre en el usuario, especialmente si no está familiarizado con este tipo de interfaz.
+
+      </p>
+      <div class="image-section">
+        <img src="Assets/Figura4.jpg" alt="">
+        <p><strong>Figura 4: </strong>Etapa de grabación del prototipo de baja fidelidad.</p>
+      </div>
+      <p>El ítem (1) se mantuvo igual.
+
+      El ítem (2) anteriormente correspondía al selector de autor. En esta etapa fue reemplazado por un cronómetro que indica la duración actual de la grabación en curso. Este elemento fue introducido como un affordance cognitivo: su presencia transmite de manera inmediata al usuario que está grabando.
+
+      El ítem (3) es otro botón para finalizar la grabación. Este nuevo botón, ubicado debajo del cuadro de texto, fue incorporado con un propósito evaluativo: se pretende comparar su eficacia frente al botón tradicional con ícono. La inclusión de la etiqueta textual "Finalizar grabación" busca maximizar claridad y minimizar la ambigüedad.
+
+      </p>
+      <div class="image-section">
+        <img src="Assets/Figura5.jpg" alt="">
+        <p><strong>Figura 5: </strong>Etapa de evaluación del diseño original.</p>
+      </div>
+      <p>Esta es la tercera etapa del ciclo de grabación y corresponde a la evaluación de la grabación realizada. El usuario evaluará el resultado y decidirá si enviarlo o borrarlo.
+
+      El ítem (1) mantiene el problema anteriormente mencionado.
+
+      El ítem (2) es el botón de inicio de grabación desactivado. La capa color gris sobre este actúa como un affordance cognitivo, es una convención visual ampliamente reconocida en interfaces digitales que le indica al usuario que la función está temporalmente deshabilitada o no disponible en este momento. El botón es percibido como apagado.
+
+      El problema de estos dos ítems es que no son necesarios, se pueden remover por completo para reducir la carga cognitiva y eliminar distracciones.
+
+      El item (3) es un conjunto compuesto por el audio resultante, los botones para enviar o borrar grabación y el contador de audios enviados. El reproductor fue construido a partir del diseño convencional de un reproductor de audio, actuando como un affordance cognitivo. Se utilizaron colores convencionales (verde para enviar, rojo para borrar) como affordances cognitivos y emocionales, que comunican claramente la naturaleza y consecuencias de las acciones. El color verde está culturalmente asociado con avanzar o confirmar mientras que el color rojo está culturalmente asociado a detener o eliminar. El tacho de basura y el símbolo de tilde son iconos culturalmente reconocidos que también ayudan a reforzar estas ideas. Finalmente, las etiquetas “Enviar” y “Borrar” indican explícitamente la funcionalidad de cada botón. El único problema con este ítem es el título “GRABACIÓN” que es ambiguo.
+
+      </p>
+      <div class="image-section">
+        <img src="Assets/Figura6.jpg" alt="">
+        <p><strong>Figura 6: </strong>Etapa de evaluación del prototipo de baja fidelidad.</p>
+      </div>
+      <p>Siguiendo el principio de simplicidad, se eliminaron los ítems (1) y (2) de esta etapa. Además se reemplazó la etiqueta “GRABACIÓN” por “¿Querés escuchar tu grabación?” que es una pregunta directa que invita al usuario a realizar una acción específica.</p>
+      <div class="image-section">
+        <img src="Assets/Figura7.jpg" alt="">
+        <p><strong>Figura 7: </strong>Contexto sobre Archivoz.</p>
+      </div>
+      <div class="image-section">
+        <img src="Assets/Figura8.jpg" alt="">
+        <p><strong>Figura 8: </strong>Indicaciones que el usuario debe seguir durante el proceso.</p>
+      </div>
+      <p>Finalmente, se ideó una manera de poder proporcionarle al usuario las indicaciones que debe que tener en cuenta durante la donación de audios, sin necesidad de mirar un video explicativo, lo que viola el principio de detectabilidad. Se agregaron pasos previos al inicio del proceso.
+
+        En la figura 7 se introduce brevemente el propósito del sistema y se contextualiza la participación del usuario. Si bien esta etapa puede considerarse redundante en el producto final (donde se espera que el usuario ya esté informado sobre el objetivo del sistema), fue incluida en en este prototipo para facilitar la comprensión durante las entrevistas.
+
+        La figura 8 contiene instrucciones sobre cómo realizar la lectura del texto. Se hace énfasis en la necesidad de una lectura fluida y natural, e incluye pautas explícitas sobre qué hacer en caso de cometer errores (borrar la grabación y continuar con otra).
+
+        Ambos pasos cuentan con un overlay gris sobre la fase inicial del ciclo de grabación que actúa como un affordance cognitivo comunicando de manera implícita que el resto del sistema no está disponible en ese momento. Además cuentan con botones para avanzar o retroceder un paso, cuyo diseños contienen una flecha que actúa como un affordance cognitivo indicando la dirección en la que el usuario se moverá.
+        
+      </p>
+      <div class="image-section">
+        <img src="Assets/Figura9.jpg" alt="">
+        <p><strong>Figura 9: </strong>Indicaciones para prueba de audio.</p>
+      </div>
+      <div class="image-section">
+        <img src="Assets/Figura10.jpg" alt="">
+        <p><strong>Figura 10: </strong>Prueba de audio.</p>
+      </div>
+      <p>Como paso adicional previo al inicio del ciclo de grabación, se incorporó una etapa de verificación del funcionamiento del micrófono. Aunque esta funcionalidad no es necesaria en entrevistas presenciales o controladas, se incluyó para simular la experiencia completa que tendría un usuario real al utilizar la plataforma de forma autónoma.
+
+      En la figura 9 se presenta un mensaje breve que informa al usuario que está a punto de grabar un fragmento de 10 segundos con el objetivo de calibrar el audio. Esto permite que se prepare antes de comenzar.
+
+      En la figura 10, se muestra un texto de prueba que el usuario debe leer en voz alta. Esta etapa tiene una duración fija de 10 segundos. Al completarse el tiempo, el sistema transiciona automáticamente al primer paso del ciclo de grabación principal, eliminando la necesidad de interacción manual.
+      </p>
+      <h3>A partir de acá, comenzaré a hablar de las entrevistas que realizamos.</h3>
     </div>
 
     <!-- Step 5 End: Add your paper methodology -->
@@ -492,7 +592,25 @@
     <!-- Step 7 End: Add your paper conclusion -->
 
     <!-- Step 8 Start: Add your paper references -->
+    <div class="content-section" id="references">
+      <h2>Referencias</h2>
+      <p>Ardila, R., Branson, M., Davis, K., Kohler, M., Meyer, J., Henretty, M., Morais, R., Saunders, L., Tyers, F. M., and Weber, G. (2019). Common Voice: A massively-multilingual speech corpus. In Proceedings of the 12th Conference on Language Resources and Evaluation (LREC 2020).
 
+        VoxForge. (2025). Open speech corpus. Disponible en: https://www.voxforge.org
+
+        Lingua Libre. (2025). Lingua Libre: Open collaborative project for multilingual speech recording. Disponible en: https://lingualibre.org
+
+        Norman, D. A. (1988). The Psychology of Everyday Things. New York: Basic Books.
+
+        Hartson, R., & Pyla, P. S. (2018). The UX Book: Agile UX Design for a Quality User Experience. Morgan Kaufmann.
+
+        Hewett, Thomas & Baecker, Ronald & Card, Stuart & Carey, Tom & Gasen, Jean & Tremaine, Marilyn & Perlman, Gary & Strong, Gary & Verplank, William. (1992). ACM SIGCHI Curricula for Human-Computer Interaction. 10.1145/2594128. 
+
+        R, Pushpakumar & Sanjaya, Karun & Rathika, S. & Alawadi, Ahmed & Makhzuna, Khamdamova & Venkatesh, S. & Rajalakshmi, B.. (2023). Human-Computer Interaction: Enhancing User Experience in Interactive Systems. E3S Web of Conferences. 399. 10.1051/e3sconf/202339904037.
+
+        Issa, T., & Isaias, P. (2022). Sustainable Design: HCI, Usability and Environmental Concerns. Springer.
+      </p>
+    </div>
     <!-- 
     Please only edit below between CODE tags - TODOs
     Remove this step if not applicable
