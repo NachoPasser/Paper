@@ -104,15 +104,38 @@
 
     <div class="header">
       <h1>Paper Title</h1>
-      <div class="authors">
-        <p>
-          <a href="#">Ignacio Nicolas Passerini Terranova</a>
-        </p>
-        <p>
-          <a>Universidad Nacional de Tres de Febrero</a> | <a href="">Intercambios Transorgánicos</a></p>
-        <p>
+      <div id="authors">
+        <div id="header-item">
+          <img src="./Assets/Persona.png" alt="">
+          <span>Ignacio Nicolas Passerini Terranova</a>
+        </div>
+        <div id="header-item">
+          <img src="./Assets/Persona.png" alt="">
+          <span>Victor Emmanuel Misley</a>
+        </div>
+          
+          
+      </div>
+      <div id="space">
+        <div id="header-item">
+          <img src="./Assets/Lugar.png" alt="">
+          <a href="https://untref.edu.ar/">Universidad Nacional de Tres de Febrero</a>
+        </div>
+        <div id="header-item">
+          <img src="./Assets/Lugar.png" alt="">
+          <a href="https://intercambiostransorganicos.xyz/">Intercambios Transorgánicos</a>
+        </div>
+          
+      </div>
+      <div id="contact">
+        <div id="header-item">
+          <img src="./Assets/Email.png" alt="">
           <a href="mailto:ignaciopasser@gmail.com">ignaciopasser@gmail.com</a>
-        </p>
+        </div>
+        <div id="header-item">
+          <img src="./Assets/Email.png" alt="">
+          <a href="mailto:ignaciopasser@gmail.com">emmanuel.misley@gmail.com</a>
+        </div>
       </div>
     </div>
 
@@ -181,10 +204,10 @@
       <h2>Introducción</h2>
       <p>El español hablado en Argentina presenta una gran diversidad de acentos y variaciones lingüísticas, lo que hace fundamental la creación de un corpus de voz representativo y de alta calidad para su estudio y aplicaciones tecnológicas. Si bien existen diversas herramientas en la web para la grabación y recopilación de voz, la mayoría se limita a funciones básicas como permitir la grabación y descarga de audios, sin considerar particularidades lingüísticas ni principios de diseño centrados en el usuario. Incluso iniciativas como CommonVoice, que buscan construir un corpus de voces de múltiples idiomas mediante colaboración masiva (Ardila et al., 2019), aunque bien implementadas desde la perspectiva de la Interacción Humano-Computadora (HCI), no están específicamente adaptadas al español argentino ni optimizan la cobertura fonética del dialecto local. Tampoco incorporan estrategias para mantener la motivación del usuario durante la grabación, lo que puede afectar la continuidad de la participación.
         
-        En este trabajo se propone el diseño de una grabadora de voz especialmente pensada para recolectar muestras del habla argentina. Basada en principios de Interacción Humano-Computadora (HCI), se busca crear una herramienta intuitiva, accesible y eficaz, que pueda ser utilizada por personas de todas las edades y niveles de experiencia tecnológica, incluyendo adultos mayores o usuarios con escaso manejo de computadoras. Además, se prioriza la captura de la voz en su forma más natural —en tono, acento y ritmo— asegurando que las muestras sean lo más representativos posible de la voz real de cada hablante, respetando su naturalidad y características propias. Esto permitirá construir un corpus más representativo de las particularidades del español hablado en Argentina, con potencial de impacto tanto en la investigación lingüística como en el desarrollo de tecnologías del habla adaptadas a nuestra región.
-        
-        Para el desarrollo de esta herramienta, se adoptó un enfoque iterativo basado en el ciclo de diseño de software del modelo de Norman. En una primera etapa, se evaluó la interfaz original identificando oportunidades de mejora desde la perspectiva de la Interacción Humano-Computadora (HCI). A partir de ese análisis, se diseñó un prototipo de baja fidelidad orientado a resolver los problemas detectados, con especial énfasis en la usabilidad, accesibilidad y facilidad de interacción, buscando garantizar una experiencia intuitiva para todo tipo de usuarios.
-        
+        En este trabajo se propone el diseño de una interfaz de una grabadora de voz especialmente pensada para recolectar muestras del habla argentina. Basada en principios de Interacción Humano-Computadora (HCI), se busca crear una herramienta intuitiva, accesible y eficaz, que pueda ser utilizada por personas de todas las edades y niveles de experiencia tecnológica, incluyendo adultos mayores o usuarios con escaso manejo de computadoras. Además, se prioriza la captura de la voz en su forma más natural —en tono, acento y ritmo— asegurando que las muestras sean lo más representativas posible de la voz real de cada hablante, respetando su naturaleza y características propias. Esto permitirá construir un corpus más representativo de las particularidades del español hablado en Argentina, con potencial de impacto tanto en la investigación lingüística como en el desarrollo de tecnologías del habla adaptadas a nuestra región.
+
+        Para el desarrollo de esta herramienta, se adoptó un enfoque iterativo basado en el ciclo de vida del diseño de experiencia de usuario de Hartson y Pyla (2019). Como punto de partida, se evaluó una primera iteración de la interfaz cuyo diseño fue llevado a cabo sin seguir una metodología específica, identificando oportunidades de mejora desde la perspectiva de la Interacción Humano-Computadora (HCI). A partir de ese análisis, se diseñó un prototipo de baja fidelidad orientado a resolver los problemas detectados, con especial énfasis en la usabilidad, accesibilidad y facilidad de interacción, buscando garantizar una experiencia intuitiva para el usuario objetivo.
+
         Este prototipo fue evaluado mediante pruebas de usabilidad con usuarios potenciales, lo que permitió detectar nuevas necesidades y áreas de mejora. En base a esos resultados, se desarrolló una segunda versión del prototipo, que también fue sometida a evaluación. Dado que el prototipo cumplía con los objetivos establecidos y no se identificaron inconvenientes relevantes, se avanzó con el desarrollo del prototipo de alta fidelidad.
         
         <strong>Pregunta de investigación</strong>: ¿De qué manera puede un enfoque basado en la Interacción Humano-Computadora (HCI) mejorar la accesibilidad y usabilidad de una grabadora de voz destinada a construir un corpus representativo del español hablado en Argentina?
@@ -193,90 +216,90 @@
 
     <div class="content-section" id="estado">
       <h2>Estado del arte</h2>
-      <p>Existen numerosas herramientas orientadas a la grabación y descarga de audios con fines generales, como Voice Recorder, Clipchamp, Capcut, Vocaroo, Clyp, Speakpipe y Audiopal. Estas plataformas, si bien son funcionales, no están diseñadas para la creación de corpus lingüísticos ni contemplan aspectos como la diversidad dialectal o la experiencia del usuario. En contraste, existen iniciativas específicamente orientadas a la construcción de corpus de voz, como VoxForge (VoxForge, 2025), CommonVoice (Ardila et al., 2019) y LinguaLibre (LinguaLibre, 2025) que buscan recolectar grandes volúmenes de datos mediante colaboración masiva. Sin embargo, cada una presenta limitaciones específicas en relación a los objetivos de este trabajo.
-        
+      <p>Existen numerosas herramientas orientadas a la grabación y descarga de audios con fines generales, como (Voice Recorder, 2025), (Clipchamp, 2025), (Vocaroo, 2025), (Clyp, 2025), (Speakpipe, 2025) y (Audiopal, 2025). Estas plataformas, si bien son funcionales, no están diseñadas para la creación de corpus lingüísticos ni contemplan aspectos como la diversidad dialectal o la experiencia del usuario. En contraste, existen iniciativas específicamente orientadas a la construcción de corpus de voz, como VoxForge (VoxForge, 2025), CommonVoice (Ardila et al., 2019) y LinguaLibre (LinguaLibre, 2025) que buscan recolectar grandes volúmenes de datos mediante colaboración masiva. Sin embargo, cada una presenta limitaciones específicas en relación a los objetivos de este trabajo.
+
         CommonVoice no adapta los textos al español argentino, ni busca optimizar la cobertura fonética del dialecto local. Tampoco incorpora estrategias para mantener el interés o la motivación del usuario durante la grabación, lo cual puede afectar la continuidad de la participación.
-        
+
         LinguaLibre, por otro lado, se enfoca únicamente en la grabación de palabras sueltas, lo que dificulta construir un corpus con entonación y ritmo natural del habla continua.
-        
-        VoxForge no ofrece una plataforma de grabación integrada, por lo que el usuario necesita usar programas externos para grabar, lo que puede ser una dificultad para quienes no tienen experiencia técnica. 
-        
-        A diferencia de las propuestas existentes, esta herramienta fue desarrollada bajo un enfoque centrado en los principios de la Interacción Humano-Computadora (HCI), priorizando tanto la experiencia del usuario como la calidad lingüística de las grabaciones. En este sentido, se diseñaron textos específicos para el español argentino que buscan maximizar la variedad fonética y mantener el interés durante la tarea. Además, se eliminó la posibilidad de prelectura y relectura, con el fin de evitar una pronunciación ensayada y garantizar que las grabaciones representen con mayor precisión el habla natural del usuario. 
+
+        VoxForge no ofrece una plataforma de grabación integrada, por lo que el usuario necesita usar programas externos para grabar, lo que puede ser una dificultad para quienes no tienen experiencia técnica.
+
+        A diferencia de las propuestas existentes, esta herramienta fue desarrollada para argentinos. Se diseñaron textos específicos para el español argentino que buscan maximizar la variedad fonética y mantener el interés durante la tarea. Además, se eliminó la posibilidad de prelectura y relectura, con el fin de evitar una pronunciación ensayada y garantizar que las grabaciones representen con mayor precisión el habla natural del usuario.
+
       </p>
     </div>
 
     <div class="content-section" id="marco">
       <h2>Marco teórico</h2>
-      <ol type="a">
-        <li>
-          <strong>Interacción Humano-Computadora</strong>
-          <p>La interacción humano-computadora es una disciplina que se ocupa del diseño, la evaluación y la implementación de sistemas informáticos interactivos para el uso humano, así como del estudio de los principales fenómenos que los rodean (Hewett et al. 1992). El objetivo principal de incorporar características de HCI en el diseño es desarrollar interfaces de usuario eficientes y efectivas que se ajusten a los requerimientos y deseos de los usuarios. Para lograrlo, se debe establecer un diseño de interfaz adecuado, que permita al usuario interactuar y navegar con facilidad, otorgándole mayor control sobre el sistema. (Sustainable Design).
-            
-            Entre sus principios se encuentran la usabilidad y accesibilidad. La usabilidad busca que los usuarios puedan interactuar de forma simple, efectiva y con bajo esfuerzo cognitivo. Para lograrlo, se aplican metodologías como pruebas con usuarios, evaluaciones heurísticas y diseño iterativo. Por otro lado, la accesibilidad está orientada a garantizar el uso del sistema por personas con distintas capacidades y niveles de experiencia tecnológica. En este caso se aplican principios de diseño inclusivo para que los sistemas sean accesibles para personas con discapacidades visuales, auditivas, motrices o cognitivas. (Human-Computer Interaction: Enhancing User Experience in Interactive Systems).
-            
-            Esta disciplina también considera factores como el diseño visual y la satisfacción emocional. Una interfaz atractiva motiva a los usuarios a continuar la interacción. Para ello se aplican conceptos como jerarquía visual, la teoría del color y la tipografía para crear interfaces intuitivas, atractivas y coherentes en lo visual. (Human-Computer Interaction: Enhancing User Experience in Interactive Systems).
-            
-            Aplicar los principios de HCI en el desarrollo de una herramienta de recolección de voz permite no solo mejorar la experiencia del usuario, sino también garantizar la precisión de los datos recolectados, ya que una interfaz clara y comprensible facilita un uso correcto y consistente del sistema.
-          </p>
-        </li>
-        <li>
-          <strong>Ciclo de vida del diseño de experiencia de usuario</strong>
-          <p>El ciclo de vida del diseño de experiencia de usuario (UX), según Hartson y Pyla (2019), es un proceso de diseño de experiencia de usuario iterativo y centrado en la evaluación continua. Este modelo nace de la relación entre la interacción humano-computadora (HCI) y el diseño UX, donde se emplean principios y métodos de HCI para comprender al usuario, sus necesidades y la manera en que interactúa con la tecnología. A partir de este entendimiento, se diseñan experiencias, se construyen prototipos, se evalúan mediante diversas técnicas, y los resultados se retroalimentan al proceso para refinar tanto el diseño como el conocimiento sobre la interacción. El ciclo se repite hasta lograr una interfaz que maximice la calidad de la experiencia. En vez del modelo clásico en cascada, este modelo actúa como una rueda en donde cada rotación te acerca más a tu destino, una mejor experiencia de usuario. 
-            
-            Se divide en cuatro etapas fundamentales:
-          </p>
-          <ul>
-            <li>
-              <strong>Needfinding</strong><p>En la búsqueda de necesidades (Needfinding), se analiza qué es lo que el usuario desea. Se busca comprender las tareas que los usuarios intentan realizar. Esto incluye identificar quién es el usuario, cuál es el contexto de la tarea, por qué está llevando a cabo dicha tarea y cualquier otra información relacionada con lo que se está diseñando. El proceso comienza definiendo algunas preguntas generales que se desean responder a lo largo de la recopilación de datos sobre quién es el usuario, qué está haciendo y qué necesita. Luego, se emplean diversos métodos para generar respuestas a esas preguntas y así obtener una mejor comprensión del usuario. Posteriormente, se aborda la formalización de los datos recopilados en un modelo compartible de la tarea y una lista de requisitos para la interfaz final.</p>
-            </li>
-            <li>
-              <strong>Alternativas de diseño</strong><p>Se desarrollan múltiples alternativas de diseño para evitar quedarnos atascados en una sola idea demasiado pronto. El objetivo es explorar una variedad de posibilidades antes de converger en una solución final que ofrezca una experiencia de usuario de alta calidad.</p>
-            </li>
-            <li>
-              <strong>Prototipado</strong><p>Se toman las ideas con más potencial y se transforman en prototipos que luego pueden presentarse a los usuarios. El objetivo es crear representaciones tangibles de las ideas de diseño para explorar, comunicar y evaluar soluciones antes de su implementación final. Los prototipos varían en niveles de fidelidad, que incluyen baja fidelidad (como prototipos en papel, tales como impresiones de wireframes estáticos, utilizados para la exploración del diseño y revisiones tempranas), fidelidad media (como prototipos interactivos de wireframes con navegación mediante clics) y alta fidelidad (prototipos funcionales programados).</p>
-            </li>
-            <li>
-              <strong>Evaluación</strong><p>Se evalúa la usabilidad, accesibilidad y experiencia general de cada prototipo, entrevistando a usuarios. Hay muchas formas de evaluar interfaces, se dividen en tres categorías:</p>
-              <ul>
-                <li>
-                  <p>Evaluación cualitativa: evaluación que enfatiza la totalidad del fenómeno. Se busca saber que aspectos les gusto o no les gusto a los usuarios, que estaban pensando mientran usaban la interfaz, por qué realizaron cierta acción, etc.</p>
-                </li>
-                <li>
-                  <p>Evaluación empírica: evaluación basada en resúmenes numéricos u observaciones de un fenómeno. Obtenemos feedback cuantitativo realizando experimentos controlados y evaluando los resultados. Esto lo debemos hacer luego de obtener el feedback cualitativo y requerimos de múltiples usuarios.</p>
-                </li>
-                <li>
-                  <p>Evaluación predictiva: evaluación basada en una aplicación sistematizada de principios y heurísticas preestablecidas. Es evaluar sin usuarios.</p>
-                </li>
-              </ul>
-            </li>
-          </ul>
-            
-        </li>
-        <li>
-          <strong>Affordances</strong>
-          <p>Una affordance puede definirse como una relación entre las propiedades de un objeto y las capacidades del usuario que determinan cómo podría utilizarse dicho objeto (Norman, 1988). Una silla, por ejemplo, ofrece soporte y, por lo tanto, permite sentarse. La existencia de una affordance depende tanto de las propiedades del objeto como de las capacidades perceptuales y motrices del usuario. En el contexto del diseño de experiencia de usuario (UX), esta definición ha sido ampliada: una affordance es todo aquello que permite al usuario hacer o sentir algo durante su interacción con un sistema (Hartson & Pyla, 2019).
-            En esta línea, los autores identifican cinco tipos de affordances, cada uno con un rol particular en la facilitación de la interacción.
-          </p>
-          <ul>
-            <li>
-              <u>Affordance cognitivo</u>: Característica de diseño que ayuda a los usuarios con sus acciones cognitivas: pensar, decidir, aprender, recordar y conocer cosas. Un ejemplo sería una etiqueta en un botón que ayuda a los usuarios a saber qué sucederá si hacen clic en él.
-            </li>
-            <li>
-              <u>Affordance física</u>: Característica de diseño que ayuda a los usuarios con sus acciones físicas: hacer clic, tocar, señalar, gesticular y mover cosas. Un ejemplo sería un botón lo suficientemente grande para que los usuarios puedan hacer clic en él con precisión.
-            </li>
-            <li>
-              <u>Affordance sensorial</u>: Característica de diseño que ayuda a los usuarios con sus acciones sensoriales: ver, oír y sentir (además de saborear y oler). Un ejemplo sería un tamaño de fuente lo suficientemente grande para ser legible.
-            </li>
-            <li>
-              <u>Affordance funcional</u>: Característica de diseño que ayuda a los usuarios a utilizar un producto o sistema para realizar un trabajo (es decir, la utilidad de una función del sistema). Un ejemplo sería la capacidad del sistema para ordenar una serie de números cuando los usuarios hacen clic en el botón "Ordenar".
-            </li>
-            <li>
-              <u>Affordance emocional</u>: Característica de diseño que añade impacto emocional a la experiencia del usuario y ayuda a que aprecien y disfruten la interacción. Un ejemplo sería la estética atractiva en una página web, algo que haga que la interacción sea divertida.
-            </li>
-          </ul>
-          <p>Un enfoque integral de diseño UX debe contemplar la combinación de estos cinco tipos de affordances al diseñar un artefacto de interacción. Este término engloba sistemas, dispositivos, servicios, objetos o entornos que establecen comunicación, en una o ambas direcciones, con los seres humanos.</p>
-        </li>
-      </ol>
+      <h3>Interacción Humano-Computadora</h3>
+      <p>La interacción humano-computadora es una disciplina que se ocupa del diseño, la evaluación y la implementación de sistemas informáticos interactivos para el uso humano, así como del estudio de los principales fenómenos que los rodean (Hewett et al. 1992). El objetivo principal de incorporar características de HCI en el diseño es desarrollar interfaces de usuario eficientes y efectivas que se ajusten a los requerimientos y deseos de los usuarios. Para lograrlo, se debe establecer un diseño de interfaz adecuado, que permita al usuario interactuar y navegar con facilidad, otorgándole mayor control sobre el sistema (Issa & Isaias, 2015).
+
+        Entre sus principios se encuentran la usabilidad y accesibilidad. La usabilidad busca que los usuarios puedan interactuar de forma simple, efectiva y con bajo esfuerzo cognitivo. Para lograrlo, se aplican metodologías como pruebas con usuarios, evaluaciones heurísticas y diseño iterativo. Por otro lado, la accesibilidad está orientada a garantizar el uso del sistema por personas con distintas capacidades y niveles de experiencia tecnológica. En este caso se aplican principios de diseño inclusivo para que los sistemas sean accesibles para personas con discapacidades visuales, auditivas, motrices o cognitivas (Pushpakumar et al., 2023). 
+
+        Esta disciplina también considera factores como el diseño visual y la satisfacción emocional. Una interfaz atractiva motiva a los usuarios a continuar la interacción. Para ello se aplican conceptos como jerarquía visual, la teoría del color y la tipografía para crear interfaces intuitivas, atractivas y coherentes en lo visual (Pushpakumar et al., 2023). 
+        
+        Aplicar los principios de HCI en el desarrollo de una herramienta de recolección de voz permite no solo mejorar la experiencia del usuario, sino también garantizar la precisión de los datos recolectados, ya que una interfaz clara y comprensible facilita un uso correcto y consistente del sistema.
+
+      </p>
+      <div>
+        <h3>Ciclo de vida del diseño de experiencia de usuario</h3>
+        <p>El ciclo de vida del diseño de experiencia de usuario (UX), según Hartson y Pyla (2019), es un proceso de diseño de experiencia de usuario iterativo y centrado en la evaluación continua. Este modelo nace de la relación entre la interacción humano-computadora (HCI) y el diseño UX, donde se emplean principios y métodos de HCI para comprender al usuario, sus necesidades y la manera en que interactúa con la tecnología. A partir de este entendimiento, se diseñan experiencias, se construyen prototipos, se evalúan mediante diversas técnicas, y los resultados se retroalimentan al proceso para refinar tanto el diseño como el conocimiento sobre la interacción. El ciclo se repite hasta lograr una interfaz que maximice la calidad de la experiencia. En vez del modelo clásico en cascada, este modelo actúa como una rueda en donde cada rotación te acerca más a tu destino, una mejor experiencia de usuario.</p>
+        <div class="image-section">
+          <img src="./Assets/Rueda.jpg" alt="">
+          <p><strong>Figura 1: </strong>Rueda que ilustra el ciclo de vida del diseño UX, destacando la naturaleza iterativa del proceso.</p>
+        </div>
+        <p>
+          Se divide en cuatro etapas fundamentales:</p>
+        <h4>Búsqueda de necesidades</h4>
+        <p>En la búsqueda de necesidades (Needfinding), se analiza qué es lo que el usuario desea. Se busca comprender las tareas que los usuarios intentan realizar. Esto incluye identificar quién es el usuario, cuál es el contexto de la tarea, por qué está llevando a cabo dicha tarea y cualquier otra información relacionada con lo que se está diseñando. El proceso comienza definiendo algunas preguntas generales que se desean responder a lo largo de la recopilación de datos sobre quién es el usuario, qué está haciendo y qué necesita. Luego, se emplean diversos métodos para generar respuestas a esas preguntas y así obtener una mejor comprensión del usuario. Posteriormente, se aborda la formalización de los datos recopilados en un modelo compartible de la tarea y una lista de requisitos para la interfaz final.</p>
+        <h4>Alternativas de diseño</h4>
+        <p>Se desarrollan múltiples alternativas de diseño para evitar quedarnos atascados en una sola idea demasiado pronto. El objetivo es explorar una variedad de posibilidades antes de converger en una solución final que ofrezca una experiencia de usuario de alta calidad.</p>
+        <h4>Prototipado</h4>
+        <p>Consiste en la creación de representaciones tangibles del diseño que permiten explorar ideas, comunicar propuestas y evaluar soluciones antes de comprometerse a una implementación definitiva (McCracken & Wolfe, 2004).  Tras explorar alternativas de diseño, puede llegarse a una propuesta concreta, pero en esa etapa aún no se cuenta con un sistema real que permita evaluarla en funcionamiento.
+
+          El problema de avanzar directamente a una implementación final es que implica comprometer una gran cantidad de tiempo y recursos a un diseño que no ha sido validado. En los enfoques tradicionales de desarrollo, no se puede evaluar un diseño hasta que ya está implementado, pero una vez implementado, realizar cambios suele ser costoso o directamente inviable (McCracken & Wolfe, 2004). El prototipado surge como una solución a esta paradoja: permite evaluar aspectos del diseño a través de la retroalimentación de los usuarios y detectar problemas de usabilidad antes de comprometer recursos al desarrollo definitivo. 
+
+          Los prototipos pueden construirse con distintos niveles de detalle y funcionalidad, dependiendo de la etapa del proceso de diseño y del objetivo de la evaluación. Esto da lugar a la noción de fidelidad del prototipo, entendida como el grado en que una representación se asemeja al producto final en términos de apariencia visual, interactividad y funcionalidad (Hartson & Pyla, 2019).
+        </p>
+        <h5>Baja fidelidad</h5>
+        <p>Los prototipos de baja fidelidad son versiones iniciales, esquemáticas y simplificadas de un diseño. Se caracterizan por ser rápidos, económicos y fáciles de modificar, lo que los hace ideales para etapas tempranas del proceso, cuando es necesario probar ideas y realizar ajustes rápidos basados en retroalimentación (Rogers et al., 2015).
+
+          Suelen carecer de detalles visuales definidos, como imágenes, tipografías o colores, y presentan funcionalidades limitadas o simuladas del diseño final. Se enfocan en la estructura general de la interfaz, la disposición de los elementos y el flujo de interacción. En este contexto se ubican, por ejemplo, los prototipos en papel o los wireframes estáticos (Hartson & Pyla, 2019). 
+        </p>
+        <h5>Alta fidelidad</h5>
+        <p>En contraste, los prototipos de alta fidelidad presentan una mayor similitud con el producto final. Suelen incorporar diseño visual completo, interacciones detalladas, comportamiento funcional simulado o real, y una experiencia de uso cercana a la definitiva lo que involucra mayor tiempo de desarrollo y recursos utilizados (Rogers et al., 2015). Se utilizan en etapas más avanzadas del desarrollo, cuando se han tomado decisiones clave de diseño y se necesita validar detalles detalles finos de la experiencia. En este contexto se ubican, por ejemplo, prototipos funcionales hechos con lenguajes de programación.</p>
+        <h4>Evaluación</h4>
+        <p>La evaluación consiste en determinar cuán eficaz, rápida y aceptable resulta un prototipo cuando se prueba con usuarios reales. Involucrar a los usuarios permite conocer con precisión si el diseño propuesto cumple con sus necesidades, y contribuye a descubrir errores, requerimientos no previstos y aspectos del trabajo de los usuarios que el equipo de diseño no había contemplado (McCracken & Wolfe, 2004).
+          
+          Un principio clave del enfoque centrado en el usuario es que la evaluación  debe realizarse desde etapas tempranas y de forma regular, para identificar y corregir problemas antes de que el diseño se implemente por completo (McCracken & Wolfe, 2004).
+          
+          Toda evaluación debe guiarse por objetivos de experiencia de usuario (UX goals), que son metas de alto nivel expresadas en términos de las experiencias que se desea que tengan los usuarios al interactuar con el diseño. Estos objetivos pueden derivarse de necesidades comerciales, preocupaciones de los usuarios, análisis de tareas, flujos de trabajo o modelos sociales, y pueden adaptarse a distintos perfiles o contextos de uso. Algunos ejemplos comunes incluyen: facilidad de uso para todo tipo de usuarios, eficiencia para usuarios expertos, facilidad de aprendizaje sin asistencia previa, prevención de errores en contextos críticos y satisfacción del cliente. Estos objetivos guían la evaluación y definen los criterios sobre los que debe medirse el éxito del diseño.
+          
+          Otro aspecto importante a considerar es la cantidad de participantes. Las investigaciones iniciales sugieren que entre 5 y 12 personas es un rango aceptable (Dumas & Redish, 1999), aunque una mayor cantidad suele ofrecer resultados más representativos de la población objetivo. Sin embargo, cuando existen restricciones de presupuesto o de tiempo, es razonable involucrar a un número menor de usuarios (Rogers et al., 2015).
+
+          También, debe contemplarse la repetibilidad experimental.  Si un mismo participante es expuesto a múltiples condiciones (por ejemplo, diferentes versiones de un diseño), podría beneficiarse de aprendizajes previos, lo que sesgaría los resultados. Para preservar la validez del estudio, es fundamental controlar este tipo de efectos  (Rogers et al., 2015).
+
+          Para evaluar de forma completa un sistema o prototipo, se utilizan tanto métricas cuantitativas como criterios cualitativos. En este trabajo se abordarán únicamente los criterios cualitativos.
+
+          Los datos cualitativos son datos descriptivos no numéricos que se utilizan para identificar y corregir problemas de experiencia de usuario. Generalmente, estos datos surgen de descripciones de problemas o inconvenientes observados o experimentados durante el uso del prototipo. Se recolectan mediante técnicas como la identificación de incidentes críticos, el pensamiento en voz alta (think-aloud) y métodos de inspección.
+
+          La evaluación puede ser de dos tipos: empírica o analítica.
+        </p>
+        <h5>Empírica</h5>
+        <p>Consiste en recolectar datos a través de la observación directa de usuarios reales mientras realizan tareas. Estos datos incluyen información sobre incidentes críticos y comentarios de los usuarios mientras expresan en voz alta sus pensamientos (think aloud) y/o en sus respuestas a cuestionarios. También puede incluir datos cuantitativos. Puede llevarse a cabo en un laboratorio, en entornos reales de uso o en contextos simulados.
+
+          Existen múltiples métodos de evaluación empírica, pero en este trabajo se abordará únicamente la evaluación basada en laboratorio (lab-based evaluation). Se basa en observar a usuarios mientras realizan tareas en un entorno controlado. Utiliza la identificación de incidentes críticos y la técnica de pensar en voz alta (think-aloud) para la recolección de datos cualitativos y, en algunos casos, también cuantitativos.
+
+          Un incidente crítico es un evento que ocurre mientras el usuario usa el sistema y que revela una barrera, dificultad, malestar o un desajuste entre las expectativas del usuario y el comportamiento observado del sistema. Estos incidentes pueden ser explícitos (como errores) o sutiles (como una pausa, una expresión facial o un gesto de frustración). El evaluador es quien los identifica y documenta en tiempo real, con la mayor claridad, precisión y detalle posibles. La toma de notas manual es la técnica más básica y eficaz para registrar estos datos, ya que permite capturar información perecedera que puede perderse si no se documenta inmediatamente. Cada incidente debe registrarse con información contextual: tarea que realizaba el usuario, objetos involucrados, intención, expectativa, lo que ocurrió realmente, estado emocional y, si corresponde, cómo se recuperó del problema (Hartson & Pyla, 2019).</p>
+        <h5>Analítica</h5>
+        <p>Los métodos analíticos se basan en examinar atributos inherentes del diseño en lugar de observar su uso en la práctica. Estos métodos incluyen revisiones de diseño, recorridos guiados por el diseño (design walkthroughs) y métodos de inspección, como la evaluación heurística (heuristic evaluation o HE).</p>      
+        <p>< Explicar metodos de evaluación analaticia: inspeccion de experto y evaluación heurística></p>
+
+
+<!-- <Explicar metodos de evaluación analaticia: inspeccion de experto y evaluación heurística> -->
+
+      </div>
+    
     </div>
     <!-- Step 4 End: Add your paper introduction -->
 
@@ -289,111 +312,126 @@
 
     <div class="content-section" id="methodology">
       <h2>Metodología</h2>
-      <p>Previo al presente trabajo, el equipo de desarrollo había diseñado una primera versión de la interfaz para la grabadora de voz sin seguir ninguna metodología formal de diseño centrada en el usuario. Esta versión inicial fue construida de manera intuitiva, priorizando la funcionalidad básica y asumiendo que el usuario recibiría instrucciones a través de un video explicativo. En consecuencia, aspectos fundamentales como la usabilidad, accesibilidad y experiencia de usuario no fueron considerados en profundidad durante esta etapa.
-        
-        A partir del estudio de los principios de la Interacción Humano-Computadora (HCI), se llevó a cabo un análisis crítico del diseño original, identificando sus principales deficiencias desde una nueva perspectiva centrada en el usuario. Sobre esta base, se desarrolló un prototipo de baja fidelidad orientado a resolver los problemas detectados, incorporando principios de diseño HCI con el objetivo de mejorar la usabilidad y facilitar la interacción, independizando la interfaz del video explicativo. En la siguiente sección se detallan los problemas identificados en el diseño original, así como las soluciones propuestas en el primer prototipo. 
-      
+      <p>Previo al presente trabajo, el equipo de desarrollo había diseñado una primera versión de la interfaz para la grabadora de voz sin seguir ninguna metodología formal de diseño centrada en el usuario. Esta versión inicial priorizaba la funcionalidad básica, asumiendo que el usuario recibiría instrucciones a través de un video explicativo. En consecuencia, aspectos fundamentales como la usabilidad y accesibilidad no fueron considerados en profundidad durante esta etapa.
+
+        A partir del estudio de los principios de la Interacción Humano-Computadora (HCI), se llevó a cabo un análisis crítico del diseño original, identificando sus principales deficiencias desde una perspectiva centrada en el usuario. Sobre esta base, se desarrolló un prototipo de baja fidelidad orientado a resolver los problemas detectados, incorporando principios de diseño HCI con el objetivo de mejorar la usabilidad y facilitar la interacción, sin la necesidad de recurrir a un video explicativo. Esto último es algo fundamental ya que aprender a usar una interfaz a través de un video viola el principio de diseño de detectabilidad. 
+
+        El prototipo desarrollado corresponde a click-through prototype. Este tipo de prototipo permite simular el recorrido del usuario mediante vínculos entre pantallas, pero no cuenta con funcionalidades reales ni con un diseño visual definitivo. Se optó por uno de baja fidelidad porque el objetivo principal en esta etapa era explorar ideas y evaluar el flujo de interacción del diseño de forma ágil a través de entrevistas con usuarios, permitiendo incorporar mejoras rápidamente en función de la retroalimentación recibida. Un prototipo de alta fidelidad fue descartado porque  implica una mayor inversión de tiempo y recursos que, para esta instancia de evaluación, no resulta justificada.
+
+        En la siguiente sección se detallan los problemas identificados en el diseño original, así como las soluciones propuestas en el primer prototipo.
+
+      </p>
+      <h3>1- Etapa de introducción a la grabadora</h3>
+      <p>Con el objetivo de proporcionarle al usuario tanto las indicaciones necesarias para realizar la donación de audios como una comprobación obligatoria del funcionamiento del micrófono, se incorporó una secuencia de cuatro pasos previos al inicio del proceso de grabación.
+
+        La comprobación del micrófono no es necesaria en entrevistas presenciales o controladas, pero se incluyó para simular la experiencia completa que tendría un usuario real al utilizar la plataforma de forma autónoma.
+
+        Todos los pasos siguen un diseño similar que incluye un Dialog Overlay, un patrón de diseño que presenta una ventana modal que exige que el usuario interactúe con ella antes de poder continuar con el proceso. Esta superposición bloquea la interacción con el contenido subyacente y utiliza el Lightbox Effect, que consiste en atenuar el fondo para indicar visualmente que dicha parte de la interfaz no es interactiva mientras el diálogo está activo. De este modo, el usuario centra su atención en la ventana emergente, que presenta información, instrucciones o controles necesarios para avanzar (Scott & Neil, 2009).
+
+        En este diseño, la capa semitransparente funciona como un affordance cognitivo debido a que, atenuando el fondo y destacando el modal, comunica implícitamente que el resto del sistema no está disponible mientras el overlay está activo.
+
+        Además, cada paso cuenta con botones para avanzar o retroceder, cuyo diseño incluye una flecha que actúa como otro affordance cognitivo, indicando la dirección en la que el usuario se moverá dentro del proceso.
       </p>
       <div class="image-section">
-        <img src="Assets/Figura1.jpg" alt="">
-        <p><strong>Figura 1: </strong>Etapa de pre-grabación del diseño original.</p>
+        <img src="Assets/Figura7.jpg" alt="">
+        <p><strong>Figura 2: </strong>Etapa donde se le explica al usuario cual es el objetivo de la grabadora.</p>
       </div>
-      <p>Esta pantalla representa el primer paso del ciclo de grabación. Fue diseñada con el objetivo de brindarle al usuario un momento de preparación cognitiva, en el que pueda leer y comprender el texto que va a grabar. Reduce la carga cognitiva al permitir que la grabación no lo tome por sorpresa ni lo obligue a improvisar.
+      <p>En la figura 2 se introduce brevemente el propósito del sistema y se contextualiza la participación del usuario. Si bien esta etapa puede considerarse redundante en el producto final (donde se espera que el usuario ya esté informado sobre el objetivo del sistema), fue incluida en este prototipo para facilitar la comprensión durante las entrevistas. El usuario avanza al siguiente paso pulsando el botón gris.
 
-      El ítem (1) es un menú desplegable (select) que le permite al usuario seleccionar el autor de los textos que va a leer. El problema es que este enfoque fue descartado, la selección de textos literarios no garantizaba una buena cobertura fonológica (es decir, variedad de sonidos del habla), lo cual es un objetivo central del sistema. Debido a ello, se diseñaron frases especialmente construidas para maximizar la presencia de distintos fonemas del español argentino. Entonces, este selector debe ser eliminado ya que su presencia es innecesaria. 
+      </p>
+      <div class="image-section">
+        <img src="Assets/Figura8.jpg" alt="">
+        <p><strong>Figura 3: </strong>Etapa donde se le proporcionan al usuario las indicaciones que debe seguir durante el proceso.</p>
+      </div>
+      <p>La figura 3 contiene instrucciones a seguir durante la lectura del texto. Se hace énfasis en la necesidad de una lectura fluida y natural, e incluye pautas explícitas sobre qué hacer en caso de cometer errores (borrar la grabación y continuar con otra). El usuario puede retroceder o avanzar al siguiente paso pulsando el botón gris.
 
-      El ítem (3) es un bloque de texto que tiene como propósito anticipar el contenido que se grabará en el siguiente paso. Esta presentación anticipada actúa como una estrategia de diseño que promueve la preparación mental (affordance cognitivo) y ayuda a reducir errores durante la grabación. Como se indicó previamente, el problema de este ítem es que los textos no garantizan la cobertura de todos los fonemas posibles por lo deben ser sustituidos por frases ingeniadas para la recolección de fonemas. 
+      </p>
+      <div class="image-section">
+        <img src="Assets/Figura9.jpg" alt="">
+        <p><strong>Figura 4: </strong>Etapa donde el usuario se prepara para grabar un audio.</p>
+      </div>
+      <p>En la figura 4 se presenta un mensaje breve que informa al usuario que está a punto de grabar un fragmento de 10 segundos con el objetivo de calibrar el audio. Esto permite que se prepare antes de comenzar.
 
-      El ítem (2) es el botón de inicio de grabación. Contiene el símbolo de un micrófono que actúa como un affordance cognitivo ya que es un símbolo ampliamente reconocido en contextos digitales y comunica de forma inmediata la funcionalidad de “grabar audio”.  El botón también es un affordance físico debido a que el botón tiene un tamaño y forma adecuados para interfaces táctiles, lo que permite que el usuario lo presione con facilidad. Y es un affordance sensorial gracias a que el alto contraste visual entre el botón y el fondo, y su ubicación destacada en la esquina superior derecha, mejoran su visibilidad. No presenta ningún problema de diseño.
+      </p>
+      <div class="image-section">
+        <img src="Assets/Figura10.jpg" alt="">
+        <p><strong>Figura 5: </strong>Etapa donde el usuario graba su voz con el objetivo de calibrar el audio.</p>
+      </div>
+      <p>En la figura 5 se muestra un texto de prueba que el usuario debe leer en voz alta. Esta etapa tiene una duración fija de 10 segundos. Al completarse el tiempo, el sistema transiciona automáticamente al primer paso del ciclo de grabación principal, eliminando la necesidad de interacción manual.
+
+      </p>
+      <h3>2- Etapa de pre-grabación</h3>
+      <div class="image-section">
+        <img src="Assets/Figura1.jpg" alt="">
+        <p><strong>Figura 6: </strong>Etapa de pre-grabación del diseño original.</p>
+      </div>
+      <p>La figura 6 representa el primer paso del ciclo de grabación. Fue diseñada con el objetivo de darle al usuario un momento para enfocar su atención en la tarea, leer el texto de antemano y ajustar su ritmo respiratorio y tono de voz antes de iniciar la lectura. Esto reduce el estrés asociado a comenzar de manera abrupta y disminuye la ocurrencia de errores como pausas, titubeos, tartamudeos o lecturas incorrectas. Esto último es muy importante porque necesitamos que la transcripción de la grabación coincida con el texto original.
+
+        El ítem (1) corresponde a un menú desplegable (select) que le permite al usuario seleccionar el autor de los textos que va a leer. Sin embargo, este enfoque fue descartado, la selección de textos literarios no garantiza un buen barrido fonológico (es decir, variedad de sonidos del habla), lo cual es un objetivo central del sistema. Por esta razón, se diseñaron frases especialmente construidas para garantizar la presencia de fonemas relevantes en el español argentino. En consecuencia, este selector debe ser eliminado, pues su presencia resulta innecesaria.
+
+        El ítem (2) corresponde al botón de inicio de grabación. Contiene el símbolo de un micrófono, un affordance cognitivo, ya que se trata de un ícono ampliamente reconocido en contextos digitales que comunica de forma inmediata la funcionalidad de “grabar audio”. Por esta razón, también cumple con el principio de percibilidad, al informar visualmente al usuario que se encuentra en la etapa de pre-grabación. El botón también es un affordance físico debido a que el botón tiene un tamaño y forma adecuados para interfaces táctiles, lo que permite que el usuario lo presione con facilidad. Finalmente, es también un affordance sensorial, ya que el alto contraste visual con el fondo y su ubicación destacada en la esquina superior derecha mejoran su visibilidad.
+
+        El ítem (3) corresponde a un bloque de texto que tiene como propósito poder leer con antelación el texto que se grabará en el siguiente paso. Actúa como un affordance cognitivo ya que, al conocer de antemano el contenido, el usuario puede planificar cómo lo leerá, ajustando el ritmo, la entonación y la respiración. Esta anticipación ayuda a disminuir la ansiedad y a reducir errores involuntarios durante la grabación, como tartamudeos o pausas innecesarias. El problema de este ítem radica en que los distintos textos presentados en este bloque, los cuales serán grabados, no aseguran la inclusión de todos los fonemas relevantes del español argentino. Por lo tanto, es necesario reemplazarlos por textos que sí cumplan con este requisito.
 
       </p>
       <div class="image-section">
         <img src="Assets/Figura2.jpg" alt="">
-        <p><strong>Figura 2: </strong>Etapa de pre-grabación del prototipo de baja fidelidad.</p>
+        <p><strong>Figura 7: </strong>Etapa de pre-grabación del prototipo de baja fidelidad.</p>
       </div>
-      <p>El ítem (1) es el botón de inicio de grabación. Este presenta una diferencia clave respecto al diseño original, el micrófono fue reemplazado por un nuevo ícono compuesto por un triángulo y un cuadrado. Esta decisión tuvo como objetivo evaluar si los usuarios asociaban correctamente estos símbolos a la acción de avanzar o retroceder de paso. Esta no sería la primera vez que ven este símbolo ya que, como se contará más adelante, se agregaron pasos extras previos al inicio del ciclo de grabación donde este icono está presente.
+      <p>El ítem (1) corresponde al botón de inicio de grabación. Este presenta una diferencia clave respecto al diseño original: el ícono de micrófono fue reemplazado por un nuevo símbolo compuesto por un triángulo y un cuadrado. Considerando el principio de consistencia, este cambio en el diseño tuvo como objetivo evaluar si los usuarios asociaban correctamente dichos símbolos con la acción de avanzar o retroceder un paso. No es la primera vez que los usuarios se enfrentan a estos íconos, ya que fueron utilizados previamente en los botones de la etapa de introducción, donde estaban asociados a la acción de continuar o volver a una instancia anterior.
 
-        El ítem (2), que anteriormente era un menú desplegable para seleccionar el autor del texto, fue reemplazado por un contador de audios enviados. Dicho contador también se encuentra en uno de los siguientes pasos pero se decidió incluir también en esta pantalla por el principio de flexibilidad: para beneficiar a los usuarios más experimentados, que suelen interactuar rápidamente con la interfaz y podrían no llegar a revisar este dato en pasos posteriores, lo cual podría generar confusión o frustración si no tienen claridad sobre su progreso.
-
-        Del ítem (3) reemplazaron los fragmentos de obras literarias por frases diseñadas específicamente para cubrir la mayor diversidad de fonemas del español. Esta modificación permite mejorar la calidad de los datos recogidos sin comprometer la comprensión lectora del usuario.
+        El ítem (2), que anteriormente era un menú desplegable para seleccionar el autor del texto, fue reemplazado por un contador de audios enviados. Esto cumple con el principio de percibilidad, ya que le permite al usuario verificar su progreso actual en el sistema sin necesidad de avanzar a pasos posteriores. Dicho contador también se encuentra en pasos posteriores pero se decidió incluir también en este por el principio de flexibilidad, con el fin de beneficiar a los usuarios más experimentados que suelen interactuar rápidamente con la interfaz. De esta manera, se evita que estos usuarios pasen por alto esta información en pasos posteriores, lo cual podría generar confusión o frustración al no tener claridad sobre su progreso.
 
       </p>
       <div class="image-section">
         <img src="Assets/Figura3.jpg" alt="">
-        <p><strong>Figura 3: </strong>Etapa de grabación del diseño original.</p>
+        <p><strong>Figura 8: </strong>Etapa de grabación del diseño original.</p>
       </div>
-      <p>Este es el segundo paso del ciclo de la grabación. Durante esta etapa, el usuario grabará su voz leyendo el texto que se muestra en pantalla. 
+      <p>La figura 8 representa el segundo paso del ciclo de la grabación. Durante esta etapa, el usuario grabará su voz leyendo el texto que se muestra en pantalla.
 
-        El ítem (1) es el botón de finalización de grabación. El botón de inicio de grabación cambia visualmente luego de ser activado, transformándose en un círculo rojo con un cuadrado blanco. Este símbolo se eligió porque es reconocido y asociado culturalmente con la acción de "detener grabación". Este botón representa un affordance cognitivo, ya que informa mentalmente al usuario sobre su función esperada. Al igual que el botón de inicio de grabación, es un affordance físico y sensorial. La diferencia es que este botón es aún más visible ya que el color rojo atrae rápidamente la atención. No presenta ningún problema de diseño.
-        
-        El resto de ítems mantienen los problemas descritos anteriormente.
+        El ítem (1) corresponde al botón de finalización de grabación. El botón de inicio de grabación cambia visualmente luego de ser activado, transformándose en un círculo rojo con un cuadrado blanco. Este ícono deriva de los controles físicos de dispositivos de grabación y reproducción de audio y video, como grabadoras y reproductores de cintas, donde el cuadrado representaba la acción de detener. Esta convención se ha mantenido en las interfaces digitales modernas, convirtiéndose en un símbolo ampliamente reconocido para indicar la detención de una grabación o reproducción (Linares, Rodríguez y Sanchis, 2015). Por lo tanto, este botón constituye un affordance cognitivo, ya que comunica claramente su función y, a su vez, cumple con el principio de percibilidad al informar al usuario que la grabación está en curso. Al igual que el botón de inicio de grabación, también representa un affordance físico y sensorial.
 
-        El problema de este diseño es que si bien el ícono es culturalmente reconocible, no hay otros que indiquen de forma explícita que la grabación está en curso. Esto puede generar incertidumbre en el usuario, especialmente si no está familiarizado con este tipo de interfaz.
+        El resto de ítems mantienen los problemas descritos anteriormente. 
+
+        El problema de este diseño es que si bien el ícono es culturalmente reconocible, no hay otros símbolos que indiquen de forma explícita que la grabación está en curso. Esto puede generar incertidumbre en el usuario, especialmente si no está familiarizado con este tipo de interfaz.
 
       </p>
       <div class="image-section">
         <img src="Assets/Figura4.jpg" alt="">
-        <p><strong>Figura 4: </strong>Etapa de grabación del prototipo de baja fidelidad.</p>
+        <p><strong>Figura 9: </strong>Etapa de grabación del prototipo de baja fidelidad.</p>
       </div>
-      <p>El ítem (1) se mantuvo igual.
+      <p>El ítem (1) permaneció sin modificaciones.
 
-      El ítem (2) anteriormente correspondía al selector de autor. En esta etapa fue reemplazado por un cronómetro que indica la duración actual de la grabación en curso. Este elemento fue introducido como un affordance cognitivo: su presencia transmite de manera inmediata al usuario que está grabando.
+        El ítem (2) anteriormente correspondía al selector de autor. En esta etapa fue reemplazado por un cronómetro que indica la duración actual de la grabación en curso. Actúa como un affordance cognitivo debido a que la presencia de un cronómetro aumentando su valor numérico le indica claramente al usuario que una acción está en curso, en este caso, la grabación. Además, cumple con el principio de percibilidad, pues comunica de manera constante y visible el estado activo del sistema sin necesidad de interacción adicional por parte del usuario.
 
-      El ítem (3) es otro botón para finalizar la grabación. Este nuevo botón, ubicado debajo del cuadro de texto, fue incorporado con un propósito evaluativo: se pretende comparar su eficacia frente al botón tradicional con ícono. La inclusión de la etiqueta textual "Finalizar grabación" busca maximizar claridad y minimizar la ambigüedad.
+        El ítem (3) corresponde a un segundo botón para finalizar la grabación, ubicado debajo del cuadro de texto. Su inclusión responde a un propósito evaluativo: se busca observar en qué medida los usuarios lo utilizan en comparación con el botón tradicional representado por un ícono. La etiqueta textual “Finalizar grabación” actúa como un affordance cognitivo, ya que comunica explícitamente la función del botón, facilitando la comprensión de la acción para usuarios que podrían no reconocer o interpretar el ícono tradicional del primer botón. Asimismo, el elemento cumple con el principio de percibilidad, al indicar que la grabación se encuentra en curso.
 
       </p>
       <div class="image-section">
         <img src="Assets/Figura5.jpg" alt="">
-        <p><strong>Figura 5: </strong>Etapa de evaluación del diseño original.</p>
+        <p><strong>Figura 10: </strong>Etapa de evaluación del diseño original.</p>
       </div>
       <p>Esta es la tercera etapa del ciclo de grabación y corresponde a la evaluación de la grabación realizada. El usuario evaluará el resultado y decidirá si enviarlo o borrarlo.
+        
+        El ítem (1) mantiene el problema anteriormente mencionado.
 
-      El ítem (1) mantiene el problema anteriormente mencionado.
+        El ítem (2) corresponde al botón de inicio de grabación en estado desactivado. Se aplicó una atenuación visual sobre el botón y su ícono, reduciendo su intensidad para comunicar que no se encuentran disponibles. Esta técnica se basa en el mismo principio que el Lightbox Effect, donde atenuar el fondo de la interfaz indica que dicha parte de la interfaz no es interactiva (Scott & Neil, 2009). En este sentido, el recurso funciona como un affordance cognitivo, ya que le señala al usuario que la función está temporalmente deshabilitada o no disponible. 
 
-      El ítem (2) es el botón de inicio de grabación desactivado. La capa color gris sobre este actúa como un affordance cognitivo, es una convención visual ampliamente reconocida en interfaces digitales que le indica al usuario que la función está temporalmente deshabilitada o no disponible en este momento. El botón es percibido como apagado.
+        El problema de estos dos ítems es que no son necesarios, se pueden remover por completo para reducir la carga cognitiva y eliminar distracciones.
 
-      El problema de estos dos ítems es que no son necesarios, se pueden remover por completo para reducir la carga cognitiva y eliminar distracciones.
-
-      El item (3) es un conjunto compuesto por el audio resultante, los botones para enviar o borrar grabación y el contador de audios enviados. El reproductor fue construido a partir del diseño convencional de un reproductor de audio, actuando como un affordance cognitivo. Se utilizaron colores convencionales (verde para enviar, rojo para borrar) como affordances cognitivos y emocionales, que comunican claramente la naturaleza y consecuencias de las acciones. El color verde está culturalmente asociado con avanzar o confirmar mientras que el color rojo está culturalmente asociado a detener o eliminar. El tacho de basura y el símbolo de tilde son iconos culturalmente reconocidos que también ayudan a reforzar estas ideas. Finalmente, las etiquetas “Enviar” y “Borrar” indican explícitamente la funcionalidad de cada botón. El único problema con este ítem es el título “GRABACIÓN” que es ambiguo.
+        El item (3) corresponde a un conjunto compuesto por el audio resultante, los botones para enviar o borrar grabación y el contador de audios enviados. El reproductor fue construido a partir del diseño convencional de un reproductor de audio, actuando como un affordance cognitivo ya que el usuario reconoce su función y entiende cómo interactuar con él . Respecto a los botones, se utilizaron colores convencionales (verde para enviar, rojo para borrar) como affordances cognitivos que transmiten claramente la naturaleza y consecuencias de las acciones. El color verde está culturalmente asociado con avanzar o confirmar mientras que el color rojo está culturalmente asociado a detener o eliminar debido a su vinculación con el peligro y la advertencia (Heller, 2004). El tacho de basura y el símbolo de tilde son iconos culturalmente reconocidos que también ayudan a reforzar estas ideas. Finalmente, las etiquetas “Enviar” y “Borrar” indican explícitamente la funcionalidad de cada botón. En conjunto, el ítem cumple con el principio de percibilidad, ya que comunica de modo evidente que la grabación ha finalizado, presentando el resultado y guiando al usuario hacia la acción esperada: evaluarla y decidir si enviarla o descartarla.
 
       </p>
       <div class="image-section">
         <img src="Assets/Figura6.jpg" alt="">
-        <p><strong>Figura 6: </strong>Etapa de evaluación del prototipo de baja fidelidad.</p>
+        <p><strong>Figura 11: </strong>Etapa de evaluación del prototipo de baja fidelidad.</p>
       </div>
-      <p>Siguiendo el principio de simplicidad, se eliminaron los ítems (1) y (2) de esta etapa. Además se reemplazó la etiqueta “GRABACIÓN” por “¿Querés escuchar tu grabación?” que es una pregunta directa que invita al usuario a realizar una acción específica.</p>
-      <div class="image-section">
-        <img src="Assets/Figura7.jpg" alt="">
-        <p><strong>Figura 7: </strong>Contexto sobre Archivoz.</p>
-      </div>
-      <div class="image-section">
-        <img src="Assets/Figura8.jpg" alt="">
-        <p><strong>Figura 8: </strong>Indicaciones que el usuario debe seguir durante el proceso.</p>
-      </div>
-      <p>Finalmente, se ideó una manera de poder proporcionarle al usuario las indicaciones que debe que tener en cuenta durante la donación de audios, sin necesidad de mirar un video explicativo, lo que viola el principio de detectabilidad. Se agregaron pasos previos al inicio del proceso.
+      <p>Siguiendo el principio de simplicidad, se eliminaron los ítems (1) y (2) de esta etapa. Además, se reemplazó la etiqueta 'GRABACIÓN' por la pregunta directa '¿Querés escuchar tu grabación?', que refuerza el principio de percibilidad previamente mencionado, al presentar de forma aún más clara que la grabación ha finalizado e invita explícitamente al usuario a interactuar con el resultado. Por motivos prácticos, en esta versión del prototipo no se incluyeron los íconos del tacho de basura y la tilde, ya que se trató de una iteración desarrollada rápidamente. Se aclara que su presencia no es estrictamente necesaria, pero sí deseable para mejorar la claridad y reforzar la comunicación visual.
 
-        En la figura 7 se introduce brevemente el propósito del sistema y se contextualiza la participación del usuario. Si bien esta etapa puede considerarse redundante en el producto final (donde se espera que el usuario ya esté informado sobre el objetivo del sistema), fue incluida en en este prototipo para facilitar la comprensión durante las entrevistas.
-
-        La figura 8 contiene instrucciones sobre cómo realizar la lectura del texto. Se hace énfasis en la necesidad de una lectura fluida y natural, e incluye pautas explícitas sobre qué hacer en caso de cometer errores (borrar la grabación y continuar con otra).
-
-        Ambos pasos cuentan con un overlay gris sobre la fase inicial del ciclo de grabación que actúa como un affordance cognitivo comunicando de manera implícita que el resto del sistema no está disponible en ese momento. Además cuentan con botones para avanzar o retroceder un paso, cuyo diseños contienen una flecha que actúa como un affordance cognitivo indicando la dirección en la que el usuario se moverá.
-        
       </p>
-      <div class="image-section">
-        <img src="Assets/Figura9.jpg" alt="">
-        <p><strong>Figura 9: </strong>Indicaciones para prueba de audio.</p>
-      </div>
-      <div class="image-section">
-        <img src="Assets/Figura10.jpg" alt="">
-        <p><strong>Figura 10: </strong>Prueba de audio.</p>
-      </div>
-      <p>Como paso adicional previo al inicio del ciclo de grabación, se incorporó una etapa de verificación del funcionamiento del micrófono. Aunque esta funcionalidad no es necesaria en entrevistas presenciales o controladas, se incluyó para simular la experiencia completa que tendría un usuario real al utilizar la plataforma de forma autónoma.
-
-      En la figura 9 se presenta un mensaje breve que informa al usuario que está a punto de grabar un fragmento de 10 segundos con el objetivo de calibrar el audio. Esto permite que se prepare antes de comenzar.
-
-      En la figura 10, se muestra un texto de prueba que el usuario debe leer en voz alta. Esta etapa tiene una duración fija de 10 segundos. Al completarse el tiempo, el sistema transiciona automáticamente al primer paso del ciclo de grabación principal, eliminando la necesidad de interacción manual.
-      </p>
-      <h3>A partir de acá, comenzaré a hablar de las entrevistas que realizamos.</h3>
+      
+      <h3>Entrevistas</h3>
+      <p>TODO</p>
     </div>
 
     <!-- Step 5 End: Add your paper methodology -->
@@ -596,19 +634,42 @@
       <h2>Referencias</h2>
       <p>Ardila, R., Branson, M., Davis, K., Kohler, M., Meyer, J., Henretty, M., Morais, R., Saunders, L., Tyers, F. M., and Weber, G. (2019). Common Voice: A massively-multilingual speech corpus. In Proceedings of the 12th Conference on Language Resources and Evaluation (LREC 2020).
 
-        VoxForge. (2025). Open speech corpus. Disponible en: https://www.voxforge.org
+        VoxForge (2025). Open speech corpus. Disponible en: https://www.voxforge.org
 
-        Lingua Libre. (2025). Lingua Libre: Open collaborative project for multilingual speech recording. Disponible en: https://lingualibre.org
+        Lingua Libre (2025). Open collaborative project for multilingual speech recording. Disponible en: https://lingualibre.org
 
-        Norman, D. A. (1988). The Psychology of Everyday Things. New York: Basic Books.
+        Norman, D. A. (2013). The design of everyday things (Revised and expanded edition). Basic Books.
+
+        Nielsen, J. (1994). Usability inspection methods. John Wiley & Sons.
+
+        McCracken, D. D., & Wolfe, R. J. (2004). User-centered website development: A human-computer interaction approach. Pearson Education, Inc.
+
+        Rogers, Y., Sharp, H., & Preece, J. (2023). Interaction design: Beyond human‑computer interaction (6ª ed.). John Wiley & Sons, Inc. 
 
         Hartson, R., & Pyla, P. S. (2018). The UX Book: Agile UX Design for a Quality User Experience. Morgan Kaufmann.
 
-        Hewett, Thomas & Baecker, Ronald & Card, Stuart & Carey, Tom & Gasen, Jean & Tremaine, Marilyn & Perlman, Gary & Strong, Gary & Verplank, William. (1992). ACM SIGCHI Curricula for Human-Computer Interaction. 10.1145/2594128. 
+        Issa, T., & Isaias, P. (2015). Sustainable design: HCI, usability and environmental concerns (2nd ed.). Springer.
 
-        R, Pushpakumar & Sanjaya, Karun & Rathika, S. & Alawadi, Ahmed & Makhzuna, Khamdamova & Venkatesh, S. & Rajalakshmi, B.. (2023). Human-Computer Interaction: Enhancing User Experience in Interactive Systems. E3S Web of Conferences. 399. 10.1051/e3sconf/202339904037.
+        Pushpakumar, R., Sanjaya, K., Rathika, S., Alawadi, A. H., Makhzuna, K., Venkatesh, S., & Rajalakshmi, B. (2023). Human-Computer Interaction: Enhancing User Experience in Interactive Systems. E3S Web of Conferences, 399, 04037.
 
-        Issa, T., & Isaias, P. (2022). Sustainable Design: HCI, Usability and Environmental Concerns. Springer.
+        Scott, B., & Neil, T. (2009). Designing web interfaces: Principles and patterns for rich interactions (1st ed.). O'Reilly Media.
+
+        Linares, J., Rodríguez, N., & Sanchis, Á. (2021). El gesto como icono: Análisis de la evolución de los elementos interactivos en el ámbito digital. 
+
+        Heller, E. (2004). Psicología del color: cómo actúan los colores sobre los sentimientos y la razón. Gustavo Gili.
+
+        Clipchamp (2025). Editor y creador de vídeos. Disponible en: https://app.clipchamp.com/editor/c1e95103-2fac-474e-96ff-67d2af10b540?feature=recordCreate
+
+        123apps (2025). Herramientas en línea para video, audio, pdf y conversión de archivos. Disponible en: https://online-voice-recorder.com/es/
+ 
+        Vocaroo (2025). El servicio líder en grabación de voz. Disponible en: https://vocaroo.com/
+
+        Speakpipe (2025). Free online voice recorder. Disponible en: https://www.speakpipe.com/voice-recorder
+
+        AudioPal (2025). Just create your message and embed your audio player. Disponible en: https://www.audiopal.com/create
+
+        Clyp (2025). Professional audio hosting. Disponible en: https://clyp.it/
+
       </p>
     </div>
     <!-- 
